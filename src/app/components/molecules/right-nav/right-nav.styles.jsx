@@ -28,11 +28,9 @@ export const NavbarList = styled.ul`
   list-style-type: none;
   display: flex;
   flex-flow: row nowrap;
-  /* flex-direction: row; */
   width: 75%;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
-  margin-right: 50%;
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
@@ -49,7 +47,7 @@ export const NavListItem = styled.li`
   margin: 0 1.5rem 1rem 1.5rem;
   cursor: pointer;
 
-  @media only screen and (min-width: 769px) {
+  @media only screen and (min-width: 481px) {
     margin: 0 .5rem;
 } 
 `;

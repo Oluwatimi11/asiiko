@@ -10,14 +10,14 @@ import {
 
 // export let openHamburger = '';
 
-const Navbar = () => {
+const Navbar = ({handleShow}) => {
   return (
     <NavBar>
       <NavbarLeft>
         <LogoImage url={logo} />
       </NavbarLeft>
         <NavbarRight>
-          <Hamburger />
+          <Hamburger handleShow={handleShow}/>
         </NavbarRight>
     </NavBar>
   );

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CardType from "../../components/organisms/card-type/card-type.components";
 import Main from "../../components/organisms/main/main.components";
 import Navbar from "../../components/organisms/navbar/navbar.components";
+import UserContext from "../../hooks/userContext/usercontext"; 
 
 const Home = () => {
   const [show, setShow] = useState(false);
@@ -15,13 +16,13 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <UserContext.Provider value={handleShow}>
       {show && <CardType handleClose={handleShowClose} /> } 
         <div>
-          <Navbar tobtn2={handleShow} />
+          <Navbar handleShow={handleShow} />
           <Main tobtn1={handleShow} />
         </div>
-    </div>
+    </UserContext.Provider>
   );
 };
 

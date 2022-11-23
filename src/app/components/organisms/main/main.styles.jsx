@@ -15,10 +15,6 @@ export const MainDiv = styled.div`
     flex-direction: column;
   }
 
-  @media only screen and (min-width: 769px) {
-    flex-direction: column;
-  }
-
   @media only screen and (min-width: 1025px) {
     flex-direction: row;
 }
@@ -43,14 +39,6 @@ export const MainLeftPanel = styled.div`
   @media only screen and (min-width: 320px) {
     text-align: center;
     width: 100%;
-  }
-
-  @media only screen and (min-width: 481px) {
-    
-  }
-
-  @media only screen and (min-width: 769px) {
-  
   }
 
   @media only screen and (min-width: 1025px) {
@@ -121,10 +109,14 @@ export const MainHeading = styled(Heading)`
   }
 
   @media only screen and (min-width: 769px) {
-    font-size: 50px;
-  font-weight: 700;
+    font-size: 40px;
+  font-weight: 600;
   }
 
+  @media only screen and (min-width: 1025px) {
+    font-size: 50px;
+    font-weight: 700;
+  }
 `;
 
 export const MainDivide = styled.div`
@@ -139,15 +131,21 @@ export const MainDivide = styled.div`
   }
 
   @media only screen and (min-width: 481px) {
-    text-align: center;
+    align-items: center;
     margin: auto;
     width: 70%;
   }
 
   @media only screen and (min-width: 769px) {
     width: 50%;
+    margin: auto;
+    align-items: center;
+  }
+
+  @media only screen and (min-width: 1025px) {
+    width: 50%;
     margin: 0;
-    text-align: justify;
+    align-items: justify;
   }
 `;
 
@@ -224,7 +222,6 @@ export const MainProduct = styled(Image)`
     margin-right: auto;
     width: 300px;
     height: 300px;
-    /* margin: 0; */
   }
 
   @media only screen and (min-width: 481px) {
@@ -236,9 +233,14 @@ export const MainProduct = styled(Image)`
   }
 
   @media only screen and (min-width: 768px) {
-    width: 600px;
-    height: 600px;
-    margin: 10% 5%;
+    width: 500px;
+    height: 500px;
   }
+
+  @media only screen and (min-width: 1025px) {
+    width: 500px;
+    height: 500px;
+    margin: 10% 5%;
+}
 
 `;

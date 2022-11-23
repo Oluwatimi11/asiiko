@@ -27,12 +27,17 @@ export const CardDiv = styled.div`
   background-color: #fff;
 
   @media only screen and (min-width: 320px) {
-    height: 50rem;
+    height: 40rem;
     width: 100%;
+    padding: 2rem 2rem;
+  }
+
+  @media only screen and (min-width: 481px) {
+    padding: 2rem 4rem;
   }
 
   @media only screen and (min-width: 769px) {
-    height: 50rem;
+    height: 40rem;
   }
 
   @media only screen and (min-width: 1025px) {
@@ -44,6 +49,16 @@ export const CardDiv = styled.div`
 
 export const CardTop = styled.div`
   padding-left: 100%;
+
+  @media only screen and (min-width: 320px) {
+   padding-left: 0;
+   padding-right: 100%;
+  }
+
+  @media only screen and (min-width: 769px) {
+    padding-left: 100%;
+   padding-right: 0;
+} 
 `;
 
 export const CardMid = styled.div`
@@ -66,6 +81,8 @@ export const CardHeader = styled(Heading)`
 
   @media only screen and (min-width: 320px) {
     margin: auto;
+    font-size: 25px;
+    line-height: 30px;
   }
 
 `;
@@ -82,19 +99,19 @@ export const CardBottom = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding: 0;
   width: 100%;
 
   @media only screen and (min-width: 320px) {
     flex-direction: column;
-    margin: auto;
-    padding: auto;
-    width: 100%;
+    margin: auto .5rem;
     align-items: center;
   }
 
   @media only screen and (min-width: 1025px) {
     flex-direction: row;
+    height: 0;
   }
 
   .divide {
@@ -104,22 +121,13 @@ export const CardBottom = styled.div`
     }
 
     @media only screen and (min-width: 1025px) {
-      height: 0;
     }
   }
 `;
 
 export const CardImage = styled(Image)`
-  width: 300px;
+  width: 100%;
   height: 60px;
-
-  @media only screen and (min-width: 320px) {
-    width: 200px;
-  }
-
-  @media only screen and (min-width: 1025px) {
-    width: 300px;
-  }
 `;
 
 export const CardButtons = styled(Buttons)`
@@ -128,8 +136,9 @@ export const CardButtons = styled(Buttons)`
 `;
 
 export const Cards = styled(Card)`
+
   @media only screen and (min-width: 320px) {
-    width: 70%;
+    width: 100%;
   }
 
   @media only screen and (min-width: 1025px) {

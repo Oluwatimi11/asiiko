@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Link from 'react-dom'
 import { NavbarButtons, NavbarDiv, NavbarList, NavListItem } from "./right-nav.styles";
+import UserContext from "../../../hooks/userContext/usercontext";
 
-const RightNav = ({ tobtn2, open }) => {
+const RightNav = ({ open }) => {
+  const handleShow = useContext(UserContext);
+
   return (
     <NavbarDiv open={open}>
       <NavbarList>
@@ -26,7 +29,7 @@ const RightNav = ({ tobtn2, open }) => {
             color2="#000"
             backgroundColor2="#9ef9d9"
             buttonText2="GET STARTED"
-            tobtn2={tobtn2}
+            tobtn2={handleShow}
           />
     </NavbarDiv>
   );
